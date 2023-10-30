@@ -10,5 +10,6 @@ flightRouter.post(
   validateSchema(flightSchema),
   flightController.create
 );
+flightRouter.get("/flights", flightController.findAll);
 
 export default flightRouter;

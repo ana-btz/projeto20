@@ -19,4 +19,11 @@ function notFound(message) {
   };
 }
 
-export const errors = { conflict, invalidData, notFound };
+function badRequest(message) {
+  return {
+    type: "BadRequest",
+    message,
+  };
+}
+
+export const errors = { conflict, invalidData, notFound, badRequest };
