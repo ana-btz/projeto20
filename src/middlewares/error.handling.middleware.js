@@ -19,5 +19,9 @@ export default function handleApplicationErrors(error, req, res, next) {
     return res.status(httpStatus.BAD_REQUEST).send(error.message);
   }
 
+  if (error.type === "InternalError") {
+    return res.status(httpStatus.INTERNAL_SERVER_ERROR).send(error.message);
+  }
+
   return res.sendStatus(httpStatus.INTERNAL_SERVER_ERROR);
 }

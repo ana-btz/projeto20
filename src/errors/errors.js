@@ -26,4 +26,17 @@ function badRequest(message) {
   };
 }
 
-export const errors = { conflict, invalidData, notFound, badRequest };
+function internalError(message) {
+  return {
+    type: "InternalError",
+    message,
+  };
+}
+
+export const errors = {
+  conflict,
+  invalidData,
+  notFound,
+  badRequest,
+  internalError,
+};

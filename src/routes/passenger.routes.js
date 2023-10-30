@@ -10,5 +10,6 @@ passengersRouter.post(
   validateSchema(passengerSchema),
   passengerController.create
 );
+passengersRouter.get("/passengers/travels", passengerController.findTravels);
 
 export default passengersRouter;
