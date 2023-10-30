@@ -15,4 +15,4 @@ async function findById(id) {
   return cities.rows[0];
 }
 
-export const cityRepository = { create, findByName };
+export const cityRepository = { create, findByName, findById };

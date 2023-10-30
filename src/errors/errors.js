@@ -1,15 +1,22 @@
 function conflict(message) {
   return {
-    type: "ConflictError",
+    type: "Conflict",
     message,
   };
 }
 
 function invalidData(message) {
   return {
-    type: "InvalidDataError",
+    type: "InvalidData",
     message,
   };
 }
 
-export const errors = { conflict, invalidData };
+function notFound(message) {
+  return {
+    type: "NotFound",
+    message,
+  };
+}
+
+export const errors = { conflict, invalidData, notFound };
